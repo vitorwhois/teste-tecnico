@@ -5,7 +5,7 @@ ordem alfabética, adiciona uma linha no arquivo de texto com o seguinte formato
 
 ## Estrutura do Projeto
 
-```C:\Workspace\200dev\Teste técnico
+```
 ├── src
 │   ├── csvReader.js
 │   ├── dataProcessor.js
@@ -21,7 +21,8 @@ ordem alfabética, adiciona uma linha no arquivo de texto com o seguinte formato
 │   ├── dataProcessor.test.js
 │   └── fileWriter.test.js
 ├── package.json
-└── README.md```
+└── README.md
+```
 
 
 ### Pré-requisitos
