@@ -5,21 +5,22 @@ ordem alfabética, adiciona uma linha no arquivo de texto com o seguinte formato
 
 ## Estrutura do Projeto
 
+```plaintext
 C:\Workspace\200dev\Teste técnico
 ├── src
-│ ├── csvReader.js
-│ ├── dataProcessor.js
-│ ├── fileWriter.js
-│ └── index.js
+│   ├── csvReader.js
+│   ├── dataProcessor.js
+│   ├── fileWriter.js
+│   └── index.js
 ├── data
-│ ├── input
-│ │ └── dados.csv
-│ └── output
-│ └── (gerado automaticamente)
+│   ├── input
+│   │   └── dados.csv
+│   └── output
+│       └── (gerado automaticamente)
 ├── test
-│ ├── csvReader.test.js
-│ ├── dataProcessor.test.js
-│ └── fileWriter.test.js
+│   ├── csvReader.test.js
+│   ├── dataProcessor.test.js
+│   └── fileWriter.test.js
 ├── package.json
 └── README.md
 
@@ -39,18 +40,22 @@ Instale as seguintes dependências e dependências de desenvolvimento:
    - jest: Para testes unitários.
 
 Para instalar as dependências, execute:
+
 ˋˋˋnpm install csv-parser dayjs
 npm install --save-dev jestˋˋˋ
 
 #### Comando Completo de Instalação
 Execute o seguinte comando para instalar todas as dependências:
-ˋˋˋ npm install
+
+ˋˋˋnpm install
  ˋˋˋ
 
 ## Execução
 Para executar o script, utilize o seguinte comando:
-ˋˋˋ node src/index.js src/data/input/dados.csv resultado.txt
+
+ˋˋˋnode src/index.js src/data/input/dados.csv resultado.txt
  ˋˋˋ
+
 ### Detalhamento do Comando
 - node: Comando para executar um arquivo Node.js.
 - src/index.js: Caminho para o arquivo principal do script.
@@ -81,17 +86,22 @@ Contém funções para processamento de dados:
 Contém a função escreverArquivoTXT que escreve os dados das pessoas em um arquivo TXT.
 
 ## Implementação de Testes com Jest
+
 #### Instalação do Jest
+
 Primeiro, instale o Jest como dependência de desenvolvimento:
-ˋˋˋ npm install --save-dev jest
+
+ˋˋˋnpm install --save-dev jest
  ˋˋˋ
  Adicione um script no package.json para rodar os testes:
+
  ˋˋˋ"scripts": {
     "test": "jest"
 }
  ˋˋˋ
  #### Testes para csvReader.js
-ˋˋˋ // test/csvReader.test.js
+
+ˋˋˋ// test/csvReader.test.js
 const lerCSV = require('../src/csvReader');
 const fs = require('fs');
 const csv = require('csv-parser');
@@ -122,7 +132,8 @@ describe('lerCSV', () => {
 });
  ˋˋˋ
  #### Testes para dataProcessor.js
- ˋˋˋ // test/dataProcessor.test.js
+
+ ˋˋˋ// test/dataProcessor.test.js
 const { calcularIdade, filtrarPessoasMaiores18, ordenarPessoasPorNome } = require('../src/dataProcessor');
 const dayjs = require('dayjs');
 
@@ -151,7 +162,8 @@ describe('ordenarPessoasPorNome', () => {
 });
 ˋˋˋ
 #### Testes para fileWriter.js
-ˋˋˋ // test/fileWriter.test.js
+
+ˋˋˋ// test/fileWriter.test.js
 const fs = require('fs');
 const escreverArquivoTXT = require('../src/fileWriter');
 const { calcularIdade } = require('../src/dataProcessor');
@@ -175,8 +187,8 @@ describe('escreverArquivoTXT', () => {
 });
  ˋˋˋ
 #### Rodando os Testes
+
 Para rodar os testes, use o comando:
-ˋˋˋ npm test
-ˋˋˋ
+ˋˋˋnpm testˋˋˋ
 
 ## Melhorias Sugeridas
