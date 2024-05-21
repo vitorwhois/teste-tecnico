@@ -175,7 +175,7 @@ describe('ordenarPessoasPorNome', () => {
 
 #### Testes para fileWriter.js
 
-c
+~~~javascript
 // test/fileWriter.test.js
 const fs = require('fs');
 const escreverArquivoTXT = require('../src/fileWriter');
