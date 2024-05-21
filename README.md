@@ -56,8 +56,9 @@ npm install
 ## Execução
 Para executar o script, utilize o seguinte comando:
 
-ˋˋˋnode src/index.js src/data/input/dados.csv resultado.txt
- ˋˋˋ
+~~~javascript
+node src/index.js src/data/input/dados.csv resultado.txt
+~~~
 
 ### Detalhamento do Comando
 - node: Comando para executar um arquivo Node.js.
@@ -94,17 +95,22 @@ Contém a função escreverArquivoTXT que escreve os dados das pessoas em um arq
 
 Primeiro, instale o Jest como dependência de desenvolvimento:
 
-ˋˋˋnpm install --save-dev jest
- ˋˋˋ
+~~~javascript
+npm install --save-dev jest
+~~~
+
  Adicione um script no package.json para rodar os testes:
 
- ˋˋˋ"scripts": {
+~~~javascript
+"scripts": {
     "test": "jest"
 }
- ˋˋˋ
+~~~
+
  #### Testes para csvReader.js
 
-ˋˋˋ// test/csvReader.test.js
+~~~javascript
+// test/csvReader.test.js
 const lerCSV = require('../src/csvReader');
 const fs = require('fs');
 const csv = require('csv-parser');
@@ -133,10 +139,12 @@ describe('lerCSV', () => {
         expect(resultado).toEqual([{ name: 'Guilherme', email: 'guilherme.veras@200dev.com', birthday: '2000-04-11', country: 'Brazil' }]);
     });
 });
- ˋˋˋ
+~~~
+
  #### Testes para dataProcessor.js
 
- ˋˋˋ// test/dataProcessor.test.js
+~~~javascript
+// test/dataProcessor.test.js
 const { calcularIdade, filtrarPessoasMaiores18, ordenarPessoasPorNome } = require('../src/dataProcessor');
 const dayjs = require('dayjs');
 
@@ -163,10 +171,12 @@ describe('ordenarPessoasPorNome', () => {
         expect(resultado).toEqual([{ name: 'Ana' }, { name: 'Carlos' }]);
     });
 });
-ˋˋˋ
+~~~
+
 #### Testes para fileWriter.js
 
-ˋˋˋ// test/fileWriter.test.js
+c
+// test/fileWriter.test.js
 const fs = require('fs');
 const escreverArquivoTXT = require('../src/fileWriter');
 const { calcularIdade } = require('../src/dataProcessor');
@@ -188,10 +198,13 @@ describe('escreverArquivoTXT', () => {
         expect(fs.writeFileSync).toHaveBeenCalledWith(caminhoArquivo, conteudoEsperado, 'utf8');
     });
 });
- ˋˋˋ
+~~~
+
 #### Rodando os Testes
 
 Para rodar os testes, use o comando:
-ˋˋˋnpm testˋˋˋ
+~~~javascript
+npm test
+~~~
 
 ## Melhorias Sugeridas
