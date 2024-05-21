@@ -42,7 +42,8 @@ Instale as seguintes dependências e dependências de desenvolvimento:
 Para instalar as dependências, execute:
 
 ˋˋˋnpm install csv-parser dayjs
-npm install --save-dev jestˋˋˋ
+npm install --save-dev jest
+ˋˋˋ
 
 #### Comando Completo de Instalação
 Execute o seguinte comando para instalar todas as dependências:
