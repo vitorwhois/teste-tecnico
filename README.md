@@ -22,7 +22,7 @@ C:\Workspace\200dev\Teste técnico
 │   ├── dataProcessor.test.js
 │   └── fileWriter.test.js
 ├── package.json
-└── README.md
+└── README.md```
 
 
 ### Pré-requisitos
