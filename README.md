@@ -5,8 +5,7 @@ ordem alfabética, adiciona uma linha no arquivo de texto com o seguinte formato
 
 ## Estrutura do Projeto
 
-```plaintext
-C:\Workspace\200dev\Teste técnico
+```C:\Workspace\200dev\Teste técnico
 ├── src
 │   ├── csvReader.js
 │   ├── dataProcessor.js
