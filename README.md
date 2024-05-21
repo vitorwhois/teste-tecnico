@@ -49,8 +49,9 @@ npm install --save-dev jest
 #### Comando Completo de Instalação
 Execute o seguinte comando para instalar todas as dependências:
 
-ˋˋˋnpm install
- ˋˋˋ
+~~~javascript
+npm install
+~~~
 
 ## Execução
 Para executar o script, utilize o seguinte comando:
