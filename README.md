@@ -6,6 +6,7 @@ ordem alfabética, adiciona uma linha no arquivo de texto com o seguinte formato
 ## Estrutura do Projeto
 
 ```
+teste-tecnico
 ├── src
 │   ├── csvReader.js
 │   ├── dataProcessor.js
