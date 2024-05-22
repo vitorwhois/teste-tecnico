@@ -1,15 +1,17 @@
 
 :root {
-    --primary-blue: #001435;
-    --secondary-pink: #fd097a;
-    --text-color: #aeafb1;
-    --title-color: #0a133a;
+  --bg-color: white;
+  --primary-blue: #001435;
+  --secondary-pink: #fd097a;
+  --text-color: #aeafb1;
+  --title-color: #0a133a;
+  --border-radial-gradient: circle at top left, #ff00c8, #b1f5f7;
 }
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -36,7 +38,9 @@ body {
   margin: auto;	
   border: double 2px transparent;
   border-radius: 6px;
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ff00c8, #b1f5f7);
+  background-image: 
+    linear-gradient(var(--bg-color), var(--bg-color)), 
+    radial-gradient(var(--border-radial-gradient));
   background-origin: border-box;
   background-clip: content-box, border-box;
   display: flex;
@@ -83,7 +87,23 @@ body {
 .primary-btn {
   background-color:  var(--primary-blue);
 }
-
+.primary-btn:hover{
+  opacity: 0.8;
+}
 .secondary-btn {
   background-color: var(--secondary-pink);
+}
+.secondary-btn:hover {
+  opacity: 0.8;
+}
+
+
+/* Media Query ajuste para telas pequenas com menos de 420px */
+@media (max-width: 420px) {
+  .modal {
+    width: 380px; /* Reduced width by 20px */
+  }
+  .btn {
+    width: 140px;
+  }
 }
