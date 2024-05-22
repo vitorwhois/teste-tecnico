@@ -89,7 +89,8 @@ Contém funções para processamento de dados:
 **src/fileWriter.js**
 Contém a função escreverArquivoTXT que escreve os dados das pessoas em um arquivo TXT.
 
-## Implementação de Testes com Jest
+## Melhorias Sugeridas
+### Implementação de Testes com Jest
 
 #### Instalação do Jest
 
@@ -206,5 +207,3 @@ Para rodar os testes, use o comando:
 ~~~javascript
 npm test
 ~~~
-
-## Melhorias Sugeridas
