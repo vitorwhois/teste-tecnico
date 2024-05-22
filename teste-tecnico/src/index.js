@@ -2,8 +2,10 @@ const path = require('path'); // Importa o módulo 'path' do Node.js para manipu
 const fs = require('fs'); // Importa o módulo 'fs' do Node.js para manipulação de arquivos
 
 const lerCSV = require('./csvReader'); 
-const { filtrarPessoasMaiores18, ordenarPessoasPorNome } = require('./dataProcessor'); 
+const { filtrarPessoasMaiorIdade, ordenarPessoasPorNome } = require('./dataProcessor'); 
 const escreverArquivoTXT = require('./fileWriter'); 
+const idadeLimite = 18; // Modifique de acordo com lei para maior idade.
+
 
 
 async function main() {
@@ -16,8 +18,8 @@ async function main() {
 
     try {
         const pessoas = await lerCSV(caminhoCSV);
-        const pessoasMaiores18 = filtrarPessoasMaiores18(pessoas);
-        const pessoasOrdenadas = ordenarPessoasPorNome(pessoasMaiores18);
+        const pessoasMaioresIdade  = filtrarPessoasMaiorIdade(pessoas, idadeLimite);
+        const pessoasOrdenadas = ordenarPessoasPorNome(pessoasMaioresIdade);
 
         // Define o caminho de saída para o arquivo TXT
         const caminhoTXT = path.join(__dirname, 'data', 'output', nomeArquivoTXT);
@@ -26,12 +28,14 @@ async function main() {
         const outputDir = path.join(__dirname, 'data', 'output');
         if (!fs.existsSync(outputDir)) {
             fs.mkdirSync(outputDir, { recursive: true });
+            console.log('Diretório de saída criado com sucesso.');
         }
 
         escreverArquivoTXT(pessoasOrdenadas, caminhoTXT);
         console.log('Arquivo TXT criado com sucesso!');
     } catch (err) {
-        console.error('Erro ao processar arquivos:', err);
+        console.error('Erro ao processar arquivos:', err.message);
+        process.exit(1);
     }
 }
 

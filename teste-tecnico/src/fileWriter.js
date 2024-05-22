@@ -3,14 +3,10 @@ const { calcularIdade } = require('./dataProcessor');
 
 
 function escreverArquivoTXT(pessoas, caminhoArquivo) {
-    const conteudo = [];
-    conteudo.push(`Existem ${pessoas.length} pessoas maiores de 18 anos`);
-    pessoas.forEach(pessoa => {
-        const idade = calcularIdade(pessoa.birthday);
-        // Corrigido o texto da especificação "de"
-        conteudo.push(`${pessoa.name} tem mais de ${idade} anos`);
-    });
-    fs.writeFileSync(caminhoArquivo, conteudo.join('\n'), 'utf8');
+    const conteudo = pessoas.map(pessoa => `${pessoa.name} tem mais de ${calcularIdade(pessoa.birthday)} anos`);
+    conteudo.unshift(`Existem ${pessoas.length} pessoas maiores de 18 anos`);
+    fs.writeFileSync(caminhoArquivo, conteudo.join('\n'), { encoding: 'utf8' });
 }
+
 
 module.exports = escreverArquivoTXT;
