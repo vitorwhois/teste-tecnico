@@ -84,3 +84,17 @@ A consulta SQL para calcular a idade de cada pessoa e contar a quantidade de pes
     GROUP BY Idade
     ORDER BY Idade;
     ```
+### 5. Resultado Esperado
+
+Após a execução da consulta SQL, você deve ver um resultado semelhante ao seguinte:
+
+| Idade | Quantidade |
+|-------|------------|
+| 4     | 1          |
+| 14    | 1          |
+| 24    | 1          |
+| 34    | 1          |
+| 44    | 1          |
+
+Cada linha da tabela representa uma idade diferente e a quantidade de pessoas que têm essa idade. 
+
