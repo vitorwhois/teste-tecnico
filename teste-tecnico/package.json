@@ -1,0 +1,10 @@
+{
+  "description": "",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "dayjs": "^1.11.11"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
