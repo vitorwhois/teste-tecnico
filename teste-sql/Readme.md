@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-O objetivo deste projeto é criar uma query SQL que retorna a quantidade de pessoas por idade a partir de uma tabela chamada `people`. A tabela armazena informações de pessoas, incluindo seus nomes e datas de nascimento. Utilizamos a ferramenta XAMPP para configurar um servidor local e o phpMyAdmin para gerenciar o banco de dados MySQL.
+O objetivo deste projeto é criar uma query SQL que retorna a quantidade de pessoas por idade a partir de uma tabela chamada `people`. A tabela armazena informações de pessoas, incluindo seus nomes e datas de nascimento. Utilizei a ferramenta XAMPP para configurar um servidor local e o phpMyAdmin para gerenciar o banco de dados MySQL.
 
 ## Estrutura do Projeto
 
