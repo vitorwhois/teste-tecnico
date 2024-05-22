@@ -13,12 +13,14 @@ Este teste consiste em três partes distintas
 
 Exemplo de dados:
 
+```sql
 name,email,birthday,country
 Guilherme,guilherme@gmail.com,2000-04-11,Brazil
 Maria,maria@gmail.com,1995-09-22,USA
 John,john@outlook.com,1988-07-15,Canada
 Luis,luis@ibm.com,1979-03-05,Spain
 Anna,anna@yahoo.com,2002-11-30,Germany
+```
 
 ## Parte 2: Implementação Frontend
 
